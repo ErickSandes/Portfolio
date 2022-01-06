@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="script.php">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="media/Iconsmind-Outline-Dollar-Sign-2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Contact</title>
+</head>
+<body class="home-body">
+
+    <div class="container">
+        <h1 class="contact_h1">Contact Me</h1>
+
+        <div class="datas">
+            <h2>Address:</h2> <label for="">
+                R. Rodolfo Dantas, 51
+                Periquitos, Duque de Caxias
+                RJ, 25025-420
+            </label>
+            <h2>E-mail:</h2> <label for="E-mail">ericksandes14@gmail.com</label>
+            <h2>Phone number:</h2> <label for="number">+55 21 98241-3397</label>
+        </div>
+
+        <div class="share">
+            <a href="https://twitter.com/sandes_erick" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/erick-sandes-226550210/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/ericksandes22/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div class="inputs">
+            <form action="https://mail.google.com/mail/u/" method="post" name=myForm>
+                <div class="form-group">
+                    <input type="text" name="name" required placeholder="Your Name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your E-mail" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Your Password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" class="form-control" id="comment" placeholder="Your Message" cols="30" rows="3"></textarea>
+                </div>
+                <input type="submit" class="btn" onclick="execute()" value="Send Message">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function execute() {
+            let x = document.forms["myForm"]["name"].value;
+            if (x == "") {
+              alert("Name must be filled out");
+              return false;
+            }
+
+            let message = document.getElementById("#comment")
+            addEventListener(postMessage(message))
+        }
+    </script>
+
+    <ul class="nav justify-content-center">
+        <div class="nav-one">
+            <li class="nav-item">
+              <a class="nav-link home" href="home.html"> <i class="fas fa-home"></i> Home</a>
+            </li>
+        </div>
+        <div class="nav-two">
+            <li class="nav-item">
+                <a class="nav-link about" href="about.html"> <i class="fas fa-user"></i> About</a>
+            </li>
+        </div>
+        <div class="nav-three">
+            <li class="nav-item">
+              <a class="nav-link portfolio" href="portfolio.html"> <i class="fas fa-briefcase"></i> Portfolio</a>
+            </li>
+        </div>
+        <div class="nav-four">
+            <li class="nav-item">
+              <a class="nav-link contact" href="contact.html"> <i class="fas fa-address-book"></i> Contact</a>
+            </li>
+        </div>
+    </ul>
+
+</body>
+</html>
